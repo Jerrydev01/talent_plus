@@ -56,7 +56,7 @@ const SectionFour = () => {
           </h2>
           <p className=" pt-[16px] pb-[32px] text-neutralColor text-center capitalize lg:w-[55%]">
             high-definition video is video of higher resolution and quality than
-            standard definition. while there’s no standard meaning for high
+            standard definition. while there&#39;s no standard meaning for high
             definition, generally any standard video image
           </p>
         </div>
@@ -153,8 +153,8 @@ const SectionFour = () => {
               );
             })}
           </div>
-          <div className="my-[40px] flex justify-center w-full">
-            <button className="bg-primaryColor text-white px-[32px] py-[16px] rounded-[4px]">
+          <div className="my-[40px] flex justify-center w-full ">
+            <button className="bg-primaryColor text-white px-[32px] py-[16px] rounded-[4px] capitalize">
               explore all courses
             </button>
           </div>

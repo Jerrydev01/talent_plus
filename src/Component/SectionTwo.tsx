@@ -55,7 +55,7 @@ const SectionTwo = () => {
           </h2>
           <p className="pt-[16px] pb-[32px] text-neutralColor text-center lg:text-left capitalize">
             high-definition video is video of higher resolution and quality than
-            standard definition. while there’s no standard meaning for high
+            standard definition. while there&#39;s no standard meaning for high
             definition, generally any standard video image
           </p>
           <div className="grid place-items-center lg:block">
@@ -66,7 +66,10 @@ const SectionTwo = () => {
           <div className="grid grid-cols-2 gap-[24px] pt-[24px]">
             {courses.map((item: courseProps) => {
               return (
-                <div key={item.id} className="flex items-center gap-[16px] px-[24px] lg:py-[20px] py-[8px] rounded-[8px] bg-white">
+                <div
+                  key={item.id}
+                  className="flex items-center gap-[16px] px-[24px] lg:py-[20px] py-[8px] rounded-[8px] bg-white"
+                >
                   <div
                     style={{
                       backgroundColor: item.color,

@@ -55,9 +55,9 @@ const SectionThree = () => {
           <h2 className="lg:text-[56px] text-[24px] text-center lg:text-left font-bold capitalize mt-[40px] lg:mt-[0px]">
             this is why we are best from others
           </h2>
-          <p className="pt-[16px] pb-[32px] text-neutralColor text-center lg:text-left">
+          <p className="pt-[16px] pb-[32px] text-neutralColor text-center lg:text-left capitalize">
             high-definition video is video of higher resolution and quality than
-            standard definition. while there’s no standard meaning for high
+            standard definition. while there&#39;s no standard meaning for high
             definition, generally any standard video image
           </p>
           <img src={img3} alt="person" className="lg:h-1/2 lg:object-contain" />
