@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --primary-color: #004db3;
+  --neutral-color: #a1a1a1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #f8f9fc;
+  font-family: "Satoshi", sans-serif;
+}
+
+.container_padding {
+  padding-inline: 7.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Clash Display", sans-serif;
+}
+
+.bg_head {
+  background-image: url("./assets/bg-head.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+.bg_sec_two {
+  background-image: url("./assets/bgsectwo.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+.bg_sec_three {
+  background-image: url("./assets/bgsecthree.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+/* styling for mobile view */
+@media (max-width: 728px) {
+  * {
+    font-size: 0.875rem;
+  }
+  .container_padding {
+    padding-inline: 1rem;
+  }
+  .bg_head {
+    background-image: none;
+  }
+}
