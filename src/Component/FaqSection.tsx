@@ -69,7 +69,7 @@ const FaqSection = () => {
         <div className="">
           {faqdata.map((item: FaqProps) => {
             return (
-              <div className="capitalize lg:w-[70%] m-auto border-b border-b-[#EAEAEA] py-[32px]">
+              <div key={item.id} className="capitalize lg:w-[70%] m-auto border-b border-b-[#EAEAEA] py-[32px]">
                 <div
                   onClick={() => {
                     handleClick(item.id);

@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/logo.svg";
 import Hero_image from "../assets/Hero_image.png";
 import arrowbend from "../assets/arrownend.svg";
 import socials_P from "../assets/socials_r.jpg";
@@ -9,44 +8,7 @@ import monday from "../assets/monday.svg";
 import slack from "../assets/slack.svg";
 import dropbox from "../assets/Dropbox.svg";
 
-interface ListProps {
-  id: number;
-  title: string;
-  path: string;
-}
 
-const list: ListProps[] = [
-  {
-    id: 1,
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: 2,
-    title: "about us",
-    path: "/#",
-  },
-  {
-    id: 3,
-    title: "courses",
-    path: "/#",
-  },
-  {
-    id: 4,
-    title: "testimonial",
-    path: "/#",
-  },
-  {
-    id: 5,
-    title: "community",
-    path: "/#",
-  },
-  {
-    id: 6,
-    title: "enroll now",
-    path: "/#",
-  },
-];
 
 const sponsorImg = [
   {
@@ -72,24 +34,9 @@ const sponsorImg = [
 ];
 const HeaderSection = () => {
   return (
-    <>
+    <section className="lg:pt-[6rem] pt-[6.5rem]">
       <section className="bg-[#004DB3]">
-        <article className="container_padding py-[55px] flex justify-between items-center">
-          <img className="lg:w-[130px] lg:h-[47px] w-[53px]" src={logo} alt="logo" />
-
-          <ul className="lg:flex gap-[24px] capitalize hidden">
-            {list.map((item: ListProps) => {
-              return (
-                <li key={item.id}>
-                  <a className="text-[#AAC4E6]" href={item.path}>
-                    {item.title}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </article>
-        <article className="flex flex-col lg:flex-row items-center bg_head">
+        <article className="flex flex-col lg:flex-row items-center bg_head ">
           <div className="container_padding relative">
             <h2 className=" text-[#FFFFFF] lg:text-[60px] text-[32px] lg:text-left text-center font-bold">
               Grow your skills to advance your career path
@@ -151,7 +98,7 @@ const HeaderSection = () => {
           })}
         </div>
       </section>
-    </>
+    </section>
   );
 };
 
