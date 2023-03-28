@@ -113,10 +113,10 @@ const Footer = () => {
 
   return (
     <section className="bg-[#000F24] text-white mt-[80px] capitalize ">
-      <article className="container_padding py-[166px] ">
+      <article className="container_padding lg:py-[166px] py-10 ">
         <article className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[30px]">
           <div className="pr-[130px] lg:pr-0">
-            <img src={logo} alt="logo" className="w-[130px]" />
+            <img src={logo} alt="logo" className="lg:w-[130px] w-[100px]" />
             <p className="py-[24px]">
               reach out to us on any of our social media networks
             </p>
