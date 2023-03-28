@@ -5,6 +5,7 @@ import twIcon from "../assets/twitterIcon.svg";
 import ytIcon from "../assets/youtubIcon.svg";
 import istIcon from "../assets/InstagramIcon.svg";
 import dsIcon from "../assets/DiscordIcon.svg";
+import { Link } from "react-router-dom";
 
 interface Props {
   usefulLinks?: {
@@ -123,13 +124,13 @@ const Footer = () => {
             <div className="flex gap-[30px] items-baseline">
               {socialIcons.map((item: SocialsProps) => {
                 return (
-                  <a href={item.link} className="">
+                  <Link to={item.link} className="">
                     <img
                       src={item.img}
                       alt={item.name}
                       className="w-[30px] aspect-[1/1] object-contain"
                     />
-                  </a>
+                  </Link>
                 );
               })}
             </div>
@@ -142,9 +143,9 @@ const Footer = () => {
               item.usefulLinks?.map((list: any) => {
                 return (
                   <li key={list.name}>
-                    <a className="lg:text-[24px] text-[16px]" href={list.link}>
+                    <Link className="lg:text-[24px] text-[16px]" to={list.link}>
                       {list.name}
-                    </a>
+                    </Link>
                   </li>
                 );
               })
@@ -158,9 +159,9 @@ const Footer = () => {
               item.community?.map((list: any) => {
                 return (
                   <li key={list.name}>
-                    <a className="lg:text-[24px] text-[16px]" href={list.link}>
+                    <Link className="lg:text-[24px] text-[16px]" to={list.link}>
                       {list.name}
-                    </a>
+                    </Link>
                   </li>
                 );
               })
