@@ -34,11 +34,11 @@ const sponsorImg = [
 ];
 const HeaderSection = () => {
   return (
-    <section className="lg:pt-[6rem] pt-[6.5rem]">
+    <section className="lg:pt-[5rem] pt-[2.5rem]">
       <section className="bg-[#004DB3]">
         <article className="flex flex-col lg:flex-row items-center bg_head ">
           <div className="container_padding relative">
-            <h2 className=" text-[#FFFFFF] lg:text-[60px] text-[32px] lg:text-left text-center font-bold">
+            <h2 className=" pt-10 text-[#FFFFFF] lg:text-[60px] text-[32px] lg:text-left text-center font-bold">
               Grow your skills to advance your career path
             </h2>
             <p className="text-[#AAC4E6] capitalize lg:text-left text-center">

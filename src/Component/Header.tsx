@@ -50,7 +50,7 @@ const Header = () => {
   };
   return (
     <div className="bg-primaryColor">
-      <article className="container_padding py-[35px] flex justify-between items-center fixed z-50 w-full bg-primaryColor">
+      <article className="container_padding py-[20px] flex justify-between items-center fixed z-50 w-full bg-primaryColor">
         <img
           className="lg:w-[130px] lg:h-[47px] w-[53px] relative z-[9999]"
           src={logo}
