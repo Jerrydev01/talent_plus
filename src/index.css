@@ -37,6 +37,10 @@ h6 {
   font-family: "Clash Display", sans-serif;
 }
 
+.clash_display {
+  font-family: "Clash Display", sans-serif;
+}
+
 .bg_head {
   background-image: url("./assets/bg-head.svg");
   background-repeat: no-repeat;
