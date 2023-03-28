@@ -1,15 +1,17 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './App.css'
-import Home from './Component/Home';
+import "./App.css";
+import Home from "./Component/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-
   return (
-    <div className="">
-      <Home/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;

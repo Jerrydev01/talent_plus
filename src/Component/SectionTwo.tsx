@@ -59,7 +59,7 @@ const SectionTwo = () => {
             definition, generally any standard video image
           </p>
           <div className="grid place-items-center lg:block">
-            <button className="bg-primaryColor text-white px-[32px] py-[12px] rounded-[4px]">
+            <button className="bg-primaryColor text-white px-[32px] py-[12px] rounded-[4px] capitalize">
               view courses
             </button>
           </div>

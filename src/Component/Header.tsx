@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logo.svg";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
+import { Link, useLocation } from "react-router-dom";
 
 interface ListProps {
   id: number;
@@ -44,12 +45,13 @@ const list: ListProps[] = [
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const location = useLocation();
 
   const handleClick = () => {
     setShow(!show);
   };
   return (
-    <div className="bg-primaryColor">
+    <div className="bg-primaryColor capitalize">
       <article className="container_padding py-[20px] flex justify-between items-center fixed z-50 w-full bg-primaryColor">
         <img
           className="lg:w-[130px] lg:h-[47px] w-[53px] relative z-[9999]"
@@ -60,28 +62,42 @@ const Header = () => {
         <ul
           className={`lg:flex lg:flex-row  gap-[24px]  capitalize  ${
             show === true
-              ? "flex flex-col text-center  bg-primaryColor absolute h-screen right-0 top-[80px] w-full"
+              ? "flex flex-col text-center  bg-primaryColor absolute h-screen right-0 top-[50px] pt-20 w-full"
               : "hidden"
           }`}
         >
           {list.map((item: ListProps) => {
             return (
               <li key={item.id}>
-                <a
-                  className="text-[#AAC4E6] text-[16px] font-bold lg:font-normal"
-                  href={item.path}
+                <Link
+                  className={`text-[#AAC4E6] text-[16px] lg:font-normal ${
+                    location.pathname === item.path
+                      ? "text-white font-bold"
+                      : "text-[#AAC4E6]"
+                  }
+                  ${
+                    item.title === "enroll now"
+                      ? "bg-white text-primaryColor py-[16px] px-[32px] rounded-[4px]"
+                      : ""
+                  }
+                    `}
+                  to={item.path}
                 >
                   {item.title}
-                </a>
+                </Link>
               </li>
             );
           })}
         </ul>
         <button
           onClick={handleClick}
-          className="text-white text-[54px] font-bold lg:hidden relative z-[9999]"
+          className="text-white  font-bold lg:hidden relative z-[9999]"
         >
-          {show === false ? <AiOutlineMenu /> : <IoCloseSharp />}
+          {show === false ? (
+            <AiOutlineMenu size={25} />
+          ) : (
+            <IoCloseSharp size={25} />
+          )}
         </button>
       </article>
     </div>

@@ -8,8 +8,6 @@ import monday from "../assets/monday.svg";
 import slack from "../assets/slack.svg";
 import dropbox from "../assets/Dropbox.svg";
 
-
-
 const sponsorImg = [
   {
     img: zoom,
@@ -34,7 +32,7 @@ const sponsorImg = [
 ];
 const HeaderSection = () => {
   return (
-    <section className="lg:pt-[5rem] pt-[2.5rem]">
+    <section className="lg:pt-[5rem] pt-[2.5rem] ">
       <section className="bg-[#004DB3]">
         <article className="flex flex-col lg:flex-row items-center bg_head ">
           <div className="container_padding relative">
@@ -45,12 +43,12 @@ const HeaderSection = () => {
               build your future with our quality education. the best and largest
               all-in-one online tutoring platform in the world
             </p>
-            <div className="lg:block flex justify-center">
-              <div className="flex gap-[20px] font-bold mt-[27px] relative">
-                <button className="text-white px-[27px] py-3 rounded-[3.4px] border border-white">
+            <div className="lg:block flex justify-center ">
+              <div className="flex gap-[20px] font-bold mt-[27px] relative ">
+                <button className="text-white px-[27px] py-3 rounded-[3.4px] border border-white capitalize">
                   get started now
                 </button>
-                <button className="bg-white px-[27px] py-3 rounded-[3.4px] text-primaryColor">
+                <button className="bg-white px-[27px] py-3 rounded-[3.4px] text-primaryColor capitalize">
                   {" "}
                   enroll now
                 </button>
