@@ -62,10 +62,10 @@ _Below is an example of how you can clone this project to your local Machine and
 
    ```sh
    plugins: [react()],
-  server: {
+   server: {
     host: true,
     port: 8000, // This is the port which we will use in docker
-  },
+   },
    ```
    
 4. Setup Docker
@@ -75,27 +75,27 @@ _Below is an example of how you can clone this project to your local Machine and
 
    ```sh
    version: "3.4"
-services:
- vite_docker:
-   image: node:alpine
-   container_name: vite_docker
-   entrypoint: /bin/sh
-   ports:
-     - 8000:8000
-   working_dir: /srv/app
-   volumes:
-     - type: bind
-       source: ./
-       target: /srv/app
-   tty: true
+   services:
+    vite_docker:
+      image: node:alpine
+      container_name: vite_docker
+      entrypoint: /bin/sh
+      ports:
+        - 8000:8000
+      working_dir: /srv/app
+      volumes:
+        - type: bind
+          source: ./
+          target: /srv/app
+      tty: true
    ```
    
 5. Build the Docker Container
    So far, we have added scripts to build our environment and have these files `docker-compose.yml` in our project
    Run this command to build the image on your local machine and start the container. do this only for the first time
    
-    ```sh
-   docker-compose up --build --no-recreate -d
+   ```sh
+    docker-compose up --build --no-recreate -d
    ```
    From the second time, we can use
     ```sh
@@ -114,14 +114,14 @@ services:
    
 9.We have entered the container and now need to run the commands to install the Node packages and start the app
   ```sh
-  yarn install && yarn dev
+   yarn install && yarn dev
    ```
  It will install the packages and the application will run on the defined ports
    
 10. Next time only run the below command at step 9 to start the dockerized application.
-```sh
-   yarn dev
-   ``` 
+    ```sh
+     yarn dev
+    ``` 
 
 
 ## Authors
