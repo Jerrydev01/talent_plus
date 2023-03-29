@@ -73,6 +73,7 @@ _Below is an example of how you can dockererize this React application._
    ```
    
 4. Setup Docker
+
    Use docker-composer for it as it's easier to scale as compared to relying on Dockerfile.
 
    First, we will add `docker-compose.yml` within the root of the project
@@ -95,6 +96,7 @@ _Below is an example of how you can dockererize this React application._
    ```
    
 5. Build the Docker Container
+
    So far, we have added scripts to build our environment and have these files `docker-compose.yml` in our project
    Run this command to build the image on your local machine and start the container. do this only for the first time
    
