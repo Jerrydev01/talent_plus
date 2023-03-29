@@ -1,7 +1,7 @@
 # About The Project
 
 <h2 align="center">
- <a href="https://lendsqr-fe-test-jerrydev01.vercel.app/" target="_blank">https://lendsqr-fe-test-jerrydev01.vercel.app/</a>
+ <a href="https://talent-plus-gilt.vercel.app/" target="_blank">https://talent-plus-gilt.vercel.app/</a>
 </h2>
 
 <div align="left">
