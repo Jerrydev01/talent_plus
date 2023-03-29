@@ -38,7 +38,7 @@ const SectionFive = () => {
                 slidesPerView: 2,
               },
               // when window width is >= 640px
-              1000: {
+              1030: {
                 slidesPerView: 3,
               },
             }}
