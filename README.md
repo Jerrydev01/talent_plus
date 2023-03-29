@@ -8,9 +8,13 @@
   <img alt="Logo" src="https://github.com/Jerrydev01/talent_plus/blob/master/src/assets/techtime.png?raw=true" width="100%" />
 </div>
 
-# Lendsqr Test
+<h2 align="center">
+ <a href="https://youtu.be/mY1b4wU7bGA/" target="_blank">YOUTUBE PROJECT VIDEO </a>
+</h2>
 
-This is a front End Development project that was set up to by Lendsqr a Lending-as-a-Service solution which powers lenders to launch in the shortest possible time, and scale their digital lending business across multiple channels, at the lowest cost.
+# Talent Plus 
+
+This is a front End Development project that was set up to by TALENT PLUS.
 
 ## Getting Started
 
