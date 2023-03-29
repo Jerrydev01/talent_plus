@@ -14,7 +14,7 @@
 
 # Talent Plus 
 
-This is a front End Development project that was set up to by TALENT PLUS.
+This is a front End Development project task, that was given by TALENT PLUS.
 
 ## Getting Started
 
