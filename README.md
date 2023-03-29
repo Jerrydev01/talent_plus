@@ -5,7 +5,7 @@
 </h2>
 
 <div align="left">
-  <img alt="Logo" src="https://github.com/Jerrydev01/lendsqr-fe-test/blob/master/src/assets/lendsqr.png" width="100%" />
+  <img alt="Logo" src="https://github.com/Jerrydev01/talent_plus/blob/master/src/assets/techtime.png?raw=true" width="100%" />
 </div>
 
 # Lendsqr Test
