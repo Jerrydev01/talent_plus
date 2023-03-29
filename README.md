@@ -62,6 +62,7 @@ _Below is an example of how you can dockererize this React application._
    
 
 3. Update Vite Config (skip this step if you are not using Vite React)
+
    We need to specify the host and port in vite.config.js in order to work with the Docker.
 
    ```sh
@@ -113,6 +114,7 @@ _Below is an example of how you can dockererize this React application._
    ```
    
 8. Build and start the Application
+
    Just to clarify, we have a running container, but not the installed or running react app. For that, we need to log into the container and then execute the commands
     ```sh
    docker exec -it vite_docker sh
