@@ -55,7 +55,7 @@ _Below is an example of how you can clone this project to your local Machine and
    
 ### Installation and Set up of Docker
 
-_Below is an example of how you can clone this project to your local Machine and setting up your app. This doesn't rely on any external dependencies or services._
+_Below is an example of how you can dockererize this React application._
 
 1. Download Docker App 
    <a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module" target="_blank">Docker Download</a>
