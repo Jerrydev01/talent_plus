@@ -31,8 +31,7 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can clone this project to your local Machine and setting up your app. This doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at NOT NEEDED
-2. Clone the repo
+1. Clone the repo
 
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
@@ -41,36 +40,89 @@ _Below is an example of how you can clone this project to your local Machine and
 3. Install NPM packages
 
    ```sh
-   npm install
+    yarn install
    ```
+   
+4. Start the local server
 
-## API Reference
+   ```sh
+    yarn dev
+   ```
+   
+### Installation and Set up of Docker
 
-#### Get all items
+_Below is an example of how you can clone this project to your local Machine and setting up your app. This doesn't rely on any external dependencies or services._
 
-```http
-  GET /api/items
-```
+1. Download Docker App 
+   <a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module" target="_blank">Docker Download</a>
+   
 
-| Parameter | Type     | Description                    |
-| :-------- | :------- | :----------------------------- |
-| `api_key` | `string` | **Not Required**. Your API key |
+3. Update Vite Config (skip this step if you are note using Vite React)
+   We need to specify the host and port in vite.config.js in order to work with the Docker.
 
-#### Get item
+   ```sh
+   plugins: [react()],
+  server: {
+    host: true,
+    port: 8000, // This is the port which we will use in docker
+  },
+   ```
+   
+4. Setup Docker
+   Use docker-composer for it as it's easier to scale as compared to relying on Dockerfile.
 
-```http
-  GET /api/items/${id}
-```
+   First, we will add `docker-compose.yml` within the root of the project
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+   ```sh
+   version: "3.4"
+services:
+ vite_docker:
+   image: node:alpine
+   container_name: vite_docker
+   entrypoint: /bin/sh
+   ports:
+     - 8000:8000
+   working_dir: /srv/app
+   volumes:
+     - type: bind
+       source: ./
+       target: /srv/app
+   tty: true
+   ```
+   
+5. Build the Docker Container
+   So far, we have added scripts to build our environment and have these files `docker-compose.yml` in our project
+   Run this command to build the image on your local machine and start the container. do this only for the first time
+   
+    ```sh
+   docker-compose up --build --no-recreate -d
+   ```
+   From the second time, we can use
+    ```sh
+   docker-compose up -d
+   ```
+6. Now our container is up and you should be able to test it using the following command
+    ```sh
+   docker-compose ps
+   ```
+   
+8. Build and start the Application
+   Just to clarify, we have a running container, but not the installed or running react app. For that, we need to log into the container and then execute the commands
+    ```sh
+   docker exec -it vite_docker sh
+   ```
+   
+9.We have entered the container and now need to run the commands to install the Node packages and start the app
+  ```sh
+  yarn install && yarn dev
+   ```
+ It will install the packages and the application will run on the defined ports
+   
+10. Next time only run the below command at step 9 to start the dockerized application.
+```sh
+   yarn dev
+   ``` 
 
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-- [React Icons](https://react-icons.github.io/react-icons/search)
 
 ## Authors
 
