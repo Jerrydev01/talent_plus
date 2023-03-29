@@ -126,7 +126,7 @@ _Below is an example of how you can dockererize this React application._
    ```
  It will install the packages and the application will run on the defined ports
    
-10. Next time only run the below command at step 9 to start the dockerized application.
+10. Next time you want to run the app skip step 9 and run step 10 to start the dockerized application.
     ```sh
      yarn dev
     ``` 
