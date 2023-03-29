@@ -61,7 +61,7 @@ _Below is an example of how you can dockererize this React application._
    <a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module" target="_blank">Docker Download</a>
    
 
-3. Update Vite Config (skip this step if you are note using Vite React)
+3. Update Vite Config (skip this step if you are not using Vite React)
    We need to specify the host and port in vite.config.js in order to work with the Docker.
 
    ```sh
