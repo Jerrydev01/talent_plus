@@ -1,0 +1,21 @@
+version: "3.4"
+services:
+  vite_docker:
+    image: node:alpine
+    container_name: vite_docker
+    entrypoint: /bin/sh
+    ports:
+      - 8000:8000
+    working_dir: /srv/app
+    volumes:
+      - type: bind
+        source: ./
+        target: /srv/app
+    tty: true
+
+
+# docker-compose up --build --norecreate -d
+# docker-compose up -d
+# docker-compose ps
+# docker exec -it vite_docker sh
+# yarn install && yarn dev
